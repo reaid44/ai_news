@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Global Trending News</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Global Trending News</h1>
+      <nav class="nav">
+        <button data-cat="politics" class="nav-btn active">Politics</button>
+        <button data-cat="economy" class="nav-btn">Economy</button>
+        <button data-cat="technology" class="nav-btn">Technology</button>
+        <button data-cat="sports" class="nav-btn">Sports</button>
+        <button data-cat="climate" class="nav-btn">Climate</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero">
+      <div id="hero-photo" class="hero-photo"></div>
+      <div id="hero-text" class="hero-text">
+        <h2 id="headline">Loading headline...</h2>
+        <p id="subheadline">Loading subheadline...</p>
+      </div>
+    </section>
+
+    <section class="article-section">
+      <article id="article-body" class="article-body">
+        Loading article...
+      </article>
+    </section>
+
+    <div id="error" class="error" hidden></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© Global Trending News</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
