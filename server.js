@@ -1,4 +1,5 @@
 import express from "express";
+import { getNews } from "./rss.js";
 
 const app = express();
 
@@ -9,6 +10,17 @@ app.get("/", (req, res) => {
         status: "Running",
         message: "Trading News Backend v0.01"
     });
+});
+
+app.get("/news", async (req, res) => {
+    try {
+        const news = await getNews();
+        res.json(news);
+    } catch (error) {
+        res.status(500).json({
+            error: error.message
+        });
+    }
 });
 
 const PORT = 3000;
